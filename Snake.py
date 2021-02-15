@@ -95,11 +95,11 @@ class Game:
         pygame.quit()
 
     def run(self):
-        direction = 1
+        direction = 0
         s = Snake(0, 0, (0, 255, 0))
         f = Food()
         check = False
-        save = 0
+        save = 1
         while not self.done:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -146,14 +146,14 @@ class Game:
 
 class GameTwo(Game):
     def run(self):
-        d1 = 1
+        d1 = 0
         s1 = Snake(0, 0, (0, 255, 0))
-        d2 = 3
+        d2 = 0
         s2 = Snake(rows - 1, rows - 1, (0, 0, 255))
         f = Food()
         check = False
-        save1 = 0
-        save2 = 0
+        save1 = 1
+        save2 = 3
         while not self.done:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
